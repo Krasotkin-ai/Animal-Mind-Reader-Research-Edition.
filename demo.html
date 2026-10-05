@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Animal Mind Reader — MVP</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:40px auto;padding:0 20px;background:#fafafa;color:#202124}
+.card{background:white;border:1px solid #ddd;border-radius:16px;padding:24px;margin:16px 0}
+h1{margin-bottom:8px}.bar{height:14px;background:#eee;border-radius:8px;overflow:hidden}.fill{height:100%;background:#444;width:87%}
+code{background:#f0f0f0;padding:2px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>Animal Mind Reader</h1>
+<p>Research prototype: neural decoding of a trained experimental label in mice.</p>
+<div class="card">
+<h2>Demo result</h2>
+<p><b>Predicted stimulus:</b> convex</p>
+<p><b>Model confidence:</b> 87%</p>
+<div class="bar"><div class="fill"></div></div>
+<p>This is a UI preview. Real predictions are produced by the trained model from an NWB session.</p>
+</div>
+<div class="card">
+<h2>Real pipeline</h2>
+<ol>
+<li>DANDI 000231 → NWB session</li>
+<li>Trial start/stop + <code>stimulus</code> labels</li>
+<li>Sorted neural spike times</li>
+<li>20 ms neural bins</li>
+<li>Baseline classifier / Transformer</li>
+<li>Held-out evaluation</li>
+</ol>
+</div>
+</body>
+</html>
